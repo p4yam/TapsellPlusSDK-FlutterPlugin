@@ -1,3 +1,3 @@
-# tapsell_plus
+# Tapsell Plus
 
 A new Flutter plugin.
