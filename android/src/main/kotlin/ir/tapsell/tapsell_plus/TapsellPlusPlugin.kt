@@ -98,7 +98,7 @@ class TapsellPlusPlugin(private val activity: Activity) : MethodCallHandler {
                             val response = TapsellPlusResponseModel(zoneId, "showAdOpened")
                             result.success(Gson().toJson(response))
                         } catch (e: Exception) {
-                            Log.e(TAG, e.message)
+                            Log.e(TAG, "${e.message}")
                             result.error(zoneId, e.message, null)
                         }
                     }
@@ -109,7 +109,7 @@ class TapsellPlusPlugin(private val activity: Activity) : MethodCallHandler {
                             val response = TapsellPlusResponseModel(zoneId, "showAdClosed")
                             showAdClosedResult?.success(Gson().toJson(response))
                         } catch (e: Exception) {
-                            Log.e(TAG, e.message)
+                            Log.e(TAG, "${e.message}")
                             result.error(zoneId, e.message, null)
                         }
                     }
@@ -120,7 +120,7 @@ class TapsellPlusPlugin(private val activity: Activity) : MethodCallHandler {
                             val response = TapsellPlusResponseModel(zoneId, "showAdRewarded")
                             showAdRewardedResult?.success(Gson().toJson(response))
                         } catch (e: Exception) {
-                            Log.e(TAG, e.message)
+                            Log.e(TAG, "${e.message}")
                             result.error(zoneId, e.message, null)
                         }
                     }
@@ -178,7 +178,7 @@ class TapsellPlusPlugin(private val activity: Activity) : MethodCallHandler {
             Log.e(TAG, json)
             result.success(json)
         } catch (e: Exception) {
-            Log.e(TAG, e.message)
+            Log.e(TAG, "${e.message}")
         }
     }
 }
